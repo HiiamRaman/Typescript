@@ -72,4 +72,46 @@ return ({
 createUser({id:"233",name:"Ramana"})
 
 
-//
+//assignment
+
+
+type Product  = {
+    id:string,
+    name:string,
+    price:number
+}
+
+
+function createProduct(product:Product):Product{
+  return  (product)
+}
+
+
+function printProduct (product:Product):void{
+
+    return console.log(product)
+
+}
+
+
+
+createProduct({id:"1323",name:"Apple",price:120})
+
+printProduct({id:"1323",name:"Apple",price:120})
+
+
+
+type apiResponse = 
+|{success:true ; data:number}
+|{success:false ; error:string}
+
+function processResponse (res:apiResponse){
+    if (res.success==true){
+        return res.data*2;
+
+    }
+
+    if(res.success==false){
+        return res.error
+    }
+}
