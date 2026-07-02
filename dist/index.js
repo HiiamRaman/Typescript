@@ -6,4 +6,3 @@ function display(name) {
 display("Ronaldo");
 display("Messi");
 display("Mbappe");
-//# sourceMappingURL=index.js.map

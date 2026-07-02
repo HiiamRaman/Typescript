@@ -38,4 +38,5 @@ result = 101;
 if (typeof result === "string") {
     console.log(result.toUpperCase());
 }
-//# sourceMappingURL=typenarrowing.js.map
+const data = "chai aur code ";
+const strData = data;

@@ -33,4 +33,3 @@ function comparision(value) {
 }
 comparision("sunrise");
 comparision(454);
-//# sourceMappingURL=types.js.map
