@@ -1,22 +1,19 @@
-import type { ReactNode } from "react"
-import {  useState } from "react"
-import { AuthContext } from "./Authcontext"
+import type { ReactNode } from "react";
+import { useState } from "react";
+import { AuthContext } from "./Authcontext";
 interface AuthContextProviderProps {
-    children: ReactNode
+  children: ReactNode;
 }
 
-function AuthContextProvider({children}:AuthContextProviderProps) {
-    const[user,setUser] = useState<string | null>(null);
-    const login  = (userName:string)=>setUser(userName);
-    const logout  = ()=>  setUser(null);
+function AuthContextProvider({ children }: AuthContextProviderProps) {
+  const [user, setUser] = useState<string | null>(null);
+  const login = (userName: string) => (   console.log(userName) ,setUser(userName));
+  const logout = () => setUser(null);
   return (
-   
-        <AuthContext.Provider value={{user,login,logout}}>
-
+    <AuthContext.Provider value={{ user, login, logout }}>
       {children}
-        </AuthContext.Provider>
-    
-  )
+    </AuthContext.Provider>
+  );
 }
 
-export default AuthContextProvider
+export default AuthContextProvider;

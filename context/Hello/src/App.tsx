@@ -1,7 +1,15 @@
+import Login from "./component/Login";
+import Navbar from "./component/Navbar";
+import Dashboard from "./component/dashboard";
+
 function App() {
+ 
   return (
     <>
-      <div>Hi !!! i am here </div>
+           
+      <Login/>
+      <Navbar/>
+      <Dashboard/>
     </>
   );
 }
