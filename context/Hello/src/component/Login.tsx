@@ -1,26 +1,21 @@
-import { useContext } from "react";
-import { AuthContext } from "../context/Authcontext";
-
+import { loginUser } from "../services/auth.services.ts";
 function Login() {
-  const auth = useContext(AuthContext);
-
-  if (!auth) {
-    return null;
+  async function handleSubmit() {
+    try {
+      const res = await loginUser({
+        email: "raman@gmail.com",
+        password: "123456",
+      });
+      console.log("Response", res);
+      alert(res.message)
+    } catch (error) {
+      console.log("Failed to login", error);
+    }
   }
-
-  const { login, user } = auth;
 
   return (
     <div>
-      <h1>Login</h1>
-
-      {user ? (
-        <p>Welcome, {user}!</p>
-      ) : (
-        <button onClick={() => login("Raman")}>
-          Log in
-        </button>
-      )}
+      <h1 onClick={handleSubmit}>Login</h1>
     </div>
   );
 }
